@@ -1,0 +1,56 @@
+.portal-loading {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  color: var(--muted-foreground, #64748b);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.portal-loading--screen {
+  min-height: min(70vh, 560px);
+  flex-direction: column;
+  gap: 14px;
+}
+
+.portal-loading__spinner {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+  border: 3px solid color-mix(in oklab, var(--primary, #4f67bd), transparent 82%);
+  border-top-color: var(--primary, #4f67bd);
+  border-radius: 50%;
+  animation: portal-loader-spin 750ms linear infinite;
+}
+
+.portal-loading--small .portal-loading__spinner {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+
+.portal-loading--large .portal-loading__spinner {
+  width: 42px;
+  height: 42px;
+  border-width: 4px;
+}
+
+.portal-loading--screen .portal-loading__label {
+  color: var(--muted-foreground, #64748b);
+  font-size: 0.88rem;
+}
+
+@keyframes portal-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portal-loading__spinner {
+    animation-duration: 1.8s;
+  }
+}

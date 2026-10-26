@@ -1,0 +1,41 @@
+.class-select-trigger,
+.table-trigger {
+  min-height: 40px;
+  padding-inline: 13px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--card);
+  color: var(--foreground);
+  box-shadow: none;
+  font-size: 0.86rem;
+}
+
+.class-select-trigger:hover,
+.table-trigger:hover {
+  background: var(--muted);
+}
+
+.class-select-trigger:focus-visible,
+.table-trigger:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--ring), transparent 55%);
+  outline-offset: 1px;
+}
+
+.class-select-content {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--popover);
+  color: var(--popover-foreground);
+  box-shadow: 0 12px 30px rgb(24 39 75 / 12%);
+}
+
+.class-select-item {
+  min-height: 34px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.class-select-item:hover {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}

@@ -1,0 +1,145 @@
+.timetable-card-outer {
+  width: 100%;
+  min-width: 0;
+}
+
+.timetable-card {
+  overflow: hidden;
+}
+
+.timetable-card [data-slot="card-header"] {
+  padding-bottom: 18px;
+}
+
+.timetable-title {
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card);
+}
+
+.table-container table {
+  width: 100%;
+  min-width: 880px;
+  table-layout: fixed;
+  background: var(--card);
+}
+
+.table-container thead {
+  background: var(--muted);
+}
+
+.table-container thead th {
+  padding: 12px 10px;
+  color: var(--muted-foreground);
+  font-size: 0.72rem;
+  font-weight: 650;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.table-container thead th:first-child {
+  width: 110px;
+  text-align: left;
+}
+
+.table-container tbody tr {
+  border-top: 1px solid var(--border);
+}
+
+.table-container tbody th {
+  padding: 12px;
+  color: var(--foreground);
+  font-size: 0.8rem;
+  font-weight: 650;
+  text-align: left;
+}
+
+.table-container tbody td {
+  min-width: 125px;
+  height: 112px;
+  padding: 8px;
+  border-left: 1px solid var(--border);
+  background: var(--card);
+  text-align: center;
+  vertical-align: top;
+}
+
+.table-container tbody td.free {
+  background: color-mix(in oklab, var(--background), var(--card) 65%);
+}
+
+.free-text {
+  display: inline-block;
+  margin-top: 29px;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+}
+
+.lesson {
+  height: 100%;
+  min-height: 90px;
+  padding: 10px;
+  border: 1px solid color-mix(in oklab, var(--primary), transparent 78%);
+  border-left: 3px solid var(--primary);
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--accent), var(--card) 35%);
+  text-align: left;
+}
+
+.lesson .subject {
+  color: var(--foreground);
+  font-size: 0.78rem;
+  font-weight: 650;
+  line-height: 1.35;
+}
+
+.lesson .meta {
+  margin-top: 4px;
+  color: var(--muted-foreground);
+  font-size: 0.68rem;
+}
+
+.entry-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: 7px;
+}
+
+.entry-actions .edit-btn,
+.entry-actions .delete-btn {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border-radius: 6px;
+  font-size: 0.72rem;
+}
+
+.entry-actions .edit-btn {
+  background: var(--card);
+  color: var(--foreground);
+}
+
+.edit-form {
+  display: grid;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+@media (max-width: 640px) {
+  .table-container {
+    border-radius: 8px;
+  }
+
+  .table-container thead th,
+  .table-container tbody th {
+    padding-inline: 8px;
+  }
+}

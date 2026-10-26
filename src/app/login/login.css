@@ -1,0 +1,172 @@
+.login-body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgb(85 113 214 / 16%), transparent 42%),
+    radial-gradient(ellipse at 85% 90%, rgb(73 157 190 / 12%), transparent 42%),
+    #f5f7fb;
+}
+
+.login-sheet {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.login {
+  position: relative;
+  width: min(100%, 430px);
+  min-width: 0;
+  padding: clamp(26px, 6vw, 42px);
+  transform: none;
+  border: 1px solid #e6eaf1;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgb(24 39 75 / 12%);
+}
+
+.login h1 {
+  margin: 0 0 8px;
+  color: #182235;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.login h1::after {
+  display: block;
+  margin-top: 8px;
+  color: #68758a;
+  content: "Welcome back. Sign in to continue.";
+  font-size: 0.86rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.login form .input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  margin: 0;
+  padding: 0 14px;
+  border: 1px solid #dfe4ec;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.login form .input-box:focus-within {
+  border-color: #7189d2;
+  box-shadow: 0 0 0 3px rgb(81 111 199 / 12%);
+}
+
+.login form .input-box i {
+  flex: 0 0 18px;
+  color: #7c8798;
+}
+
+.login form .input-box label {
+  position: absolute;
+  left: 43px;
+  color: #7c8798;
+  font-size: 0.88rem;
+  transition: opacity 120ms ease;
+}
+
+.login form .input-box input {
+  float: none;
+  width: 100%;
+  height: 46px;
+  padding: 0 0 0 12px;
+  color: #182235;
+}
+
+.login form .input-box input:focus ~ label,
+.login form .input-box input:valid ~ label {
+  opacity: 0;
+}
+
+.role-select-trigger {
+  width: 100%;
+  min-height: 46px;
+  justify-content: space-between;
+  border-color: #dfe4ec;
+  border-radius: 9px;
+  color: #354157;
+  text-align: left;
+}
+
+.role-select-content {
+  border: 1px solid #e3e8ef;
+  border-radius: 10px;
+  background: #fff;
+  color: #253047;
+  box-shadow: 0 12px 30px rgb(24 39 75 / 12%);
+}
+
+.role-select-label {
+  color: #7c8798;
+}
+
+.login-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 4px 0 0;
+}
+
+.login-bottom button {
+  min-height: 42px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 9px;
+  background: #405fc1;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.login-bottom button:hover {
+  transform: translateY(-1px);
+  background: #334fa8;
+}
+
+.login-bottom button .portal-loading {
+  color: #fff;
+}
+
+.login-bottom button .portal-loading__spinner {
+  border-color: rgb(255 255 255 / 35%);
+  border-top-color: #fff;
+}
+
+.login-bottom a {
+  color: #52698f;
+  font-size: 0.84rem;
+}
+
+.login-bottom a:hover {
+  color: #304b9e;
+}
+
+@media (max-width: 480px) {
+  .login-body {
+    padding: 16px;
+  }
+
+  .login {
+    padding: 26px 22px;
+  }
+}

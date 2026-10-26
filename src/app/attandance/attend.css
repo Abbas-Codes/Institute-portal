@@ -1,0 +1,99 @@
+.Attand-section {
+  width: min(1180px, 100%);
+  margin: 28px auto;
+  padding: 0 clamp(16px, 3vw, 36px);
+}
+
+.Attand-section-box {
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: 0 2px 10px rgb(24 39 75 / 3%);
+}
+
+.Attand-section .selection-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 8px 0 16px;
+}
+
+.Attand-section .select-box {
+  min-height: 40px;
+  border-color: var(--border);
+  border-radius: 9px;
+  background: var(--card);
+  box-shadow: none;
+}
+
+.Attand-section .select-box:nth-child(2) {
+  width: auto;
+}
+
+.attend-table {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.attend-table thead {
+  background: var(--muted);
+}
+
+.attend-table-head {
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.attend-table td,
+.attend-table th {
+  padding: 11px 13px;
+  border-bottom: 1px solid var(--border);
+}
+
+.attend-table tr:nth-child(even) {
+  background: color-mix(in oklab, var(--background), var(--card) 55%);
+}
+
+.table-buttons button {
+  border-radius: 8px;
+}
+
+.table-bottom-bage {
+  padding: 6px 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  font-size: 0.78rem;
+}
+
+.table-bottom-bage:nth-child(1) {
+  color: #15803d;
+}
+
+.table-bottom-bage:nth-child(2) {
+  color: #b91c1c;
+}
+
+.table-bottom-bage:nth-child(3) {
+  color: var(--primary);
+}
+
+@media (max-width: 640px) {
+  .Attand-section {
+    margin-top: 18px;
+  }
+
+  .Attand-section .selection-boxes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .Attand-section .select-box,
+  .Attand-section .select-box:nth-child(2) {
+    width: 100%;
+  }
+}

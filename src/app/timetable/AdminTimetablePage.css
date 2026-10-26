@@ -1,0 +1,153 @@
+.timetable-page {
+  display: grid;
+  gap: 24px;
+}
+
+.portal-page {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 30px clamp(18px, 3vw, 40px) 48px;
+}
+
+.portal-page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.portal-page-heading h1 {
+  margin: 4px 0 6px;
+  color: var(--foreground);
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}
+
+.portal-page-heading p:not(.portal-eyebrow) {
+  margin: 0;
+  color: var(--muted-foreground);
+  font-size: 0.92rem;
+}
+
+.portal-eyebrow {
+  margin: 0;
+  color: var(--primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.create-class-btn {
+  flex-shrink: 0;
+  gap: 9px;
+  border-radius: 9px;
+  padding-inline: 16px;
+  box-shadow: 0 3px 9px color-mix(in oklab, var(--primary), transparent 82%);
+}
+
+.timetable-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: 0 2px 10px rgb(24 39 75 / 3%);
+}
+
+.timetable-filter-copy {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.timetable-filter-copy > svg {
+  width: 38px;
+  height: 38px;
+  padding: 9px;
+  border-radius: 10px;
+  color: var(--primary);
+  background: var(--accent);
+}
+
+.timetable-filter-copy h2 {
+  margin: 0;
+  font-size: 0.94rem;
+  font-weight: 650;
+}
+
+.timetable-filter-copy p {
+  margin: 3px 0 0;
+  color: var(--muted-foreground);
+  font-size: 0.78rem;
+}
+
+.timetable-toolbar [data-slot="select-trigger"] {
+  width: min(260px, 45vw);
+  min-height: 40px;
+}
+
+.timetable-empty {
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  background: color-mix(in oklab, var(--card), var(--background) 35%);
+  text-align: center;
+}
+
+.timetable-empty > svg {
+  width: 44px;
+  height: 44px;
+  margin-bottom: 14px;
+  padding: 11px;
+  border-radius: 13px;
+  color: var(--primary);
+  background: var(--accent);
+}
+
+.timetable-empty h2 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 650;
+}
+
+.timetable-empty p {
+  margin: 7px 0 0;
+  color: var(--muted-foreground);
+  font-size: 0.85rem;
+}
+
+.form-dialog-card {
+  box-shadow: none;
+}
+
+.form-title {
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .portal-page {
+    padding-top: 22px;
+  }
+
+  .portal-page-heading,
+  .timetable-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .create-class-btn,
+  .timetable-toolbar [data-slot="select-trigger"] {
+    width: 100%;
+  }
+}

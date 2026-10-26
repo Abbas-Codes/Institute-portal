@@ -1,0 +1,92 @@
+.reset-card h1::after {
+  display: none;
+}
+
+.reset-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 13px;
+  background: #eef1fc;
+  color: #405fc1;
+}
+
+.reset-description {
+  margin: 0;
+  color: #68758a;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.reset-card form {
+  gap: 12px;
+}
+
+.reset-label {
+  margin-bottom: -5px;
+  color: #354157;
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.reset-card .input-box svg {
+  flex: 0 0 18px;
+  color: #7c8798;
+}
+
+.reset-card .input-box input {
+  padding-left: 12px;
+}
+
+.reset-submit {
+  min-height: 44px;
+  margin-top: 4px;
+  border: 0;
+  border-radius: 9px;
+  background: #405fc1;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.reset-submit:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.reset-submit .portal-loading {
+  color: #fff;
+}
+
+.reset-submit .portal-loading__spinner {
+  border-color: rgb(255 255 255 / 35%);
+  border-top-color: #fff;
+}
+
+.reset-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 22px;
+  color: #52698f;
+  font-size: 0.86rem;
+  font-weight: 550;
+}
+
+.reset-back-link:hover {
+  color: #304b9e;
+}
+
+.reset-success {
+  margin-top: 22px;
+  padding: 14px;
+  border: 1px solid #b8e2ce;
+  border-radius: 9px;
+  background: #effaf4;
+  color: #246342;
+  font-size: 0.87rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}

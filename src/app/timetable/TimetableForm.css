@@ -1,0 +1,65 @@
+.table-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.table-form .input-box {
+  position: relative;
+}
+
+.table-form .input-box input {
+  min-height: 44px;
+  padding: 10px 12px;
+  border-color: var(--border);
+  border-radius: 9px;
+  background: var(--card);
+  color: var(--foreground);
+  outline: none;
+}
+
+.table-form .input-box label {
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  padding: 0 5px;
+  background: var(--card);
+  color: var(--muted-foreground);
+  font-size: 0.72rem;
+  pointer-events: none;
+}
+
+.table-form .table-form-trigger,
+.table-form .day-select {
+  width: 100%;
+  min-height: 42px;
+  border-color: var(--border);
+  border-radius: 9px;
+  background: var(--card);
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.table-form .table-time {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.table-form .table-time .time {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.table-form .table-time .time input {
+  width: 100%;
+  min-height: 40px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--foreground);
+}

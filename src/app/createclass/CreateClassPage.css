@@ -1,0 +1,206 @@
+.create-class-page {
+  width: min(1120px, 100%);
+  min-height: calc(100vh - 68px);
+  margin: 0 auto;
+  padding: 4px clamp(18px, 3vw, 40px) 48px;
+  color: var(--foreground);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h1.createclass {
+  width: min(1120px, 100%);
+  margin: 30px auto 6px;
+  padding: 0 clamp(18px, 3vw, 40px);
+  color: var(--foreground);
+  font-size: clamp(1.7rem, 3vw, 2.1rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.create-class-page .form-container form h2 {
+  color: var(--foreground);
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.filter {
+  min-height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: var(--card);
+  color: var(--foreground);
+}
+
+.form-container {
+  width: 100%;
+  max-width: 820px;
+  padding: clamp(18px, 3vw, 28px);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: 0 2px 10px rgb(24 39 75 / 3%);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-container form > .class-input-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 12px;
+}
+
+.form-container form > .class-input-section .input-box {
+  position: relative;
+  width: 100%;
+}
+
+.form-container form > .class-input-section .input-box label {
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  padding: 0 5px;
+  background: var(--card);
+  color: var(--muted-foreground);
+  font-size: 0.73rem;
+}
+
+.form-container form > .class-input-section input,
+.subject-input-btn input {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--foreground);
+}
+
+.form-container form > .class-input-section button {
+  min-height: 42px;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.subject-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.subject-input-btn {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+.subject-input-btn button {
+  min-height: 42px;
+  border-radius: 8px;
+}
+
+.subject-section ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.subject-section ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px 6px 11px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--muted);
+  color: var(--foreground);
+  font-size: 0.8rem;
+}
+
+.subject-section ul li button {
+  display: grid;
+  width: 23px;
+  height: 23px;
+  place-items: center;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--muted-foreground);
+}
+
+.column-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 22px;
+}
+
+.class-list {
+  width: 100%;
+  margin-top: 12px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+}
+
+.class-list h2 {
+  margin: 0;
+}
+
+.class-list table {
+  width: 100%;
+  min-width: 560px;
+}
+
+.class-list th {
+  height: 42px;
+  background: var(--muted);
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
+  font-weight: 650;
+  text-align: left;
+}
+
+.class-list td {
+  padding-block: 11px;
+  color: var(--foreground);
+}
+
+.class-list tr:nth-child(even) {
+  background: color-mix(in oklab, var(--background), var(--card) 50%);
+}
+
+.class-list p {
+  padding: 24px;
+  color: var(--muted-foreground);
+  text-align: center;
+}
+
+.class-edit-delete button {
+  border-radius: 7px;
+}
+
+@media (max-width: 640px) {
+  .form-container form > .class-input-section,
+  .subject-input-btn {
+    grid-template-columns: 1fr;
+  }
+
+  .column-toggle {
+    justify-content: stretch;
+  }
+
+  .column-toggle [data-slot="select-trigger"] {
+    width: 100%;
+  }
+}

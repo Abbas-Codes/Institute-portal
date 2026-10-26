@@ -1,0 +1,126 @@
+.fee-page {
+  min-height: calc(100vh - 68px);
+  background: transparent;
+  padding: 2rem clamp(18px, 3vw, 40px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.fee-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgb(24 39 75 / 3%);
+  width: 100%;
+  max-width: 900px;
+  padding: clamp(20px, 3vw, 30px);
+}
+
+.fee-metric {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--background), var(--card) 55%);
+}
+
+.fee-metric p:first-child {
+  margin: 0 0 8px;
+  color: var(--muted-foreground);
+  font-size: 0.78rem;
+}
+
+.fee-metric p:last-child {
+  margin: 0;
+  color: var(--foreground);
+  font-size: 1.3rem;
+  font-weight: 680;
+  letter-spacing: -0.025em;
+}
+
+.fee-trend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px 18px;
+  color: var(--muted-foreground);
+  font-size: 0.82rem;
+}
+
+.fee-trend svg {
+  color: var(--primary);
+}
+
+.fee-title {
+  font-size: 1.35rem;
+  font-weight: 680;
+  color: var(--foreground);
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.student-info {
+  text-align: center;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  margin-bottom: 1.5rem;
+}
+
+.fee-message {
+  text-align: center;
+  color: #b91c1c;
+  margin-bottom: 1rem;
+}
+
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fee-table th {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.fee-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.fee-table tr:hover {
+  background-color: var(--muted);
+}
+
+.fee-page .status {
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+}
+
+.fee-page .status.paid {
+  background-color: #bbf7d0;
+  color: #166534;
+}
+
+.fee-page .status.pending {
+  background-color: #fde68a;
+  color: #92400e;
+}
+
+.fee-page .status.unpaid {
+  background-color: #fecaca;
+  color: #991b1b;
+}
+
+.no-fee {
+  text-align: center;
+  font-style: italic;
+  color: var(--muted-foreground);
+  margin-top: 2rem;
+}

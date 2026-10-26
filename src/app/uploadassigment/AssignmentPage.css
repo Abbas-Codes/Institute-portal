@@ -1,0 +1,17 @@
+.assigment-section{
+    background: none;
+}
+.assignment-input{
+    box-shadow: none;
+}
+.assignment-input.text{
+    height: 80px;
+    resize: none;
+}
+.assignment-input.select{
+    width: 100%;
+}
+.table-filter{
+    padding: 5px 20px;
+    box-shadow: none;
+}
