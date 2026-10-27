@@ -20,6 +20,12 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Public read-only demo
+
+Visitors can open `/demo` without signing in to explore the portal with fictional sample data. The demo does not connect to Firebase and cannot create or change users, classes, attendance, or other records. The live dashboard and its login requirements are unchanged.
+
+Links to the preview are available from the dashboard's signed-out screen and the login page. Do not use this preview as a substitute for Firebase authentication or Firestore security rules; it does not grant access to live institute data.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

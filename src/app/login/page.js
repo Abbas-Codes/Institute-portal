@@ -133,6 +133,12 @@ const LogIn = () => {
               )}
             </button>
           </div>
+          <Link
+            className="mt-3 block text-center text-sm font-medium text-primary underline-offset-4 hover:underline"
+            href="/demo"
+          >
+            Explore read-only demo
+          </Link>
         </form>
       </div>
     </div>

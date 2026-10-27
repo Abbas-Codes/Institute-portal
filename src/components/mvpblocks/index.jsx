@@ -476,6 +476,12 @@ export default function DashboardPage() {
           >
             Sign in <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
+          <Link
+            href="/demo"
+            className="mx-auto mt-3 flex w-fit items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium hover:bg-muted"
+          >
+            Explore features without signing in <ArrowRight className="size-4" aria-hidden="true" />
+          </Link>
         </div>
       </main>
     );

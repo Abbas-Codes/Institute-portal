@@ -23,7 +23,7 @@ function LegalFooter() {
 
 export default function ClientLayout({ children }) {
   const pathname = usePathname();
-  const noSidebarRoutes = ["/login", "/reset"];
+  const noSidebarRoutes = ["/login", "/reset", "/demo"];
   const hideSidebar = noSidebarRoutes.includes(pathname);
 
   return (
